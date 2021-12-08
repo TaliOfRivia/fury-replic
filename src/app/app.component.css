@@ -1,0 +1,109 @@
+.sidebar {
+    background: rgb(40, 49, 68);
+    color: white;
+    padding: 0;
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgb(44, 54, 73);
+}
+
+
+.content { 
+    background: rgb(230, 230, 230);
+}
+
+.logo {
+    padding: 15px 25px;
+    background: rgb(33, 41, 57);
+    /* z-index: 1; */
+    /* position: fixed; */
+}
+
+.logo_txt {
+    fill: white;
+    width: 60px;
+}
+
+.logo_img {
+    fill: white;
+    width: 26px;
+    margin-right: 25px;
+} 
+
+.user {
+    background: rgb(33, 41, 57);
+    text-align: center;
+    padding: 25px 0;
+}
+
+.user p {
+    color: rgb(192, 192, 192);
+}
+
+.user h3 {
+    margin: 5px;
+}
+
+.user img {
+    width: 72px;
+    height: 72px;
+    border-radius: 100px;
+}
+
+.user mat-icon {
+    margin: 5px 10px 0 10px;
+    font-size: 24px;
+}
+
+.menu {
+    background: rgb(40, 49, 68);
+    padding: 15px 0;
+    
+}
+
+.menu h5 {
+    color: rgb(192, 192, 192);
+    font-weight: 600;
+    margin: 0 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 25px 5px 25px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+.menu a:hover {
+    background: rgb(33, 41, 57);
+}
+
+.menu a span {
+    vertical-align: super;
+    font-size: 16px;
+}
+
+.menu a>mat-icon {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.menu a>mat-icon:last-child {
+    float: right; 
+    margin: 0;
+}
+
+.dropdown-menu {
+    background: rgb(33, 41, 57);
+}
+
+.dropdown-menu mat-icon {
+    color: rgb(144, 148, 156);
+}
+
+
+.dropdown-menu a:hover {
+    color: white;
+    background: rgb(35, 43, 60);
+}
