@@ -1,0 +1,31 @@
+.navbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+
+  background-color: #673ab7;
+  padding: 2rem 1rem;
+}
+.links{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  margin: 1rem 0;
+}
+.navbar h2{
+  color: #FFFFFF;
+  margin: 0 .5rem;
+}
+.navbar a, span{
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 .5rem;
+}
+.active{
+  color: #FFFFFF;
+}
+
+a{
+  color: black;
+}

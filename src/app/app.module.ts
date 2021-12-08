@@ -16,7 +16,13 @@ import {MatInputModule} from "@angular/material/input";
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ForgotPasswordFormComponent } from './forgot-password-form/forgot-password-form.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
-
+import { SimpleLayoutComponent } from './PageLayouts/simple-layout/simple-layout.component';
+import { SimpleTabbedComponent } from './PageLayouts/simple-tabbed/simple-tabbed.component';
+import {MatTabsModule} from "@angular/material/tabs";
+import { FillerComponent } from './PageLayouts/filler/filler.component';
+import { CardLayoutComponent } from './PageLayouts/card-layout/card-layout.component';
+import {MatCardModule} from "@angular/material/card";
+import { CardTabbedLayoutComponent } from './PageLayouts/card-tabbed-layout/card-tabbed-layout.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +31,11 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     LoginFormComponent,
     ForgotPasswordFormComponent,
     ComingSoonComponent,
+    SimpleLayoutComponent,
+    SimpleTabbedComponent,
+    FillerComponent,
+    CardLayoutComponent,
+    CardTabbedLayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +48,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     MatCheckboxModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatTabsModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
