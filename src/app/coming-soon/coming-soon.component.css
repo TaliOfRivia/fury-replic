@@ -1,6 +1,6 @@
 .container-fluid{
-  background-color: #DDD;
-  padding: 6.4% 12%;
+  background-color: #673ab7;
+  padding: 16.3% 12%;
   overflow: hidden;
 }
 .row{
@@ -8,45 +8,54 @@
 }
 .col-4{
   padding: 0;
+  padding: 0;
+}
+h2{
+  font-size: 32px;
+  font-weight: 500;
+}
+h3{
+  font-size: 25px;
+  font-weight: 400;
 }
 .form {
-  background-color: #fff;
 
+  background-color: #EEE;
   text-align: center;
   border-radius: 1rem;
   padding-bottom: 3rem;
 }
 .icon{
-  background-color: #673ab7;
+  background-color: #fff;
   background-image: url("/assets/Angular_full_color_logo.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
 
   padding: 5rem 0;
-
   border-radius: 1rem 1rem 0 0;
 }
-form{
-  margin-bottom: 2rem;
+.undericon-text{
+  text-align: center;
+  background-color: #fff;
+  padding-bottom: 1rem;
+}
+.social-medias{
+  margin-top: .5rem;
+}
+.social-medias img{
+  margin: 0 .5rem;
 }
 p{
-  margin: 0
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 600;
 }
 .inputs{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-
   margin-top: 1rem;
   padding: 0 2rem;
+
 }
-mat-form-field, button{
+mat-form-field, button {
   width: 100%;
-}
-mat-checkbox{
-  font-size: 12px;
-  margin-bottom: 1rem;
 }

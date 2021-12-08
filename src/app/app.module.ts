@@ -13,12 +13,18 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import { LoginFormComponent } from './login-form/login-form.component';
+import { ForgotPasswordFormComponent } from './forgot-password-form/forgot-password-form.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationFormComponent,
+    LoginFormComponent,
+    ForgotPasswordFormComponent,
+    ComingSoonComponent,
   ],
   imports: [
     BrowserModule,
