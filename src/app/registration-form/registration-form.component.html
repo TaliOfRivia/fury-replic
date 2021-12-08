@@ -1,0 +1,47 @@
+<div class="container-fluid row">
+  <div class="col">
+
+  </div>
+  <div class="form col-4">
+    <div class="icon"></div>
+    <div class="inputs">
+
+      <form [formGroup]="options">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input type="" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>E-mail</mat-label>
+          <input type="" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-checkbox [formControl]="hideRequiredControl">I read and agree with <a href="#">terms and policy</a></mat-checkbox>
+
+        <button mat-flat-button color="primary">Create account</button>
+      </form>
+      <p>allready have an account?</p>
+      <a href="login">sign in here</a>
+    </div>
+  </div>
+  <div class="col">
+
+  </div>
+</div>
