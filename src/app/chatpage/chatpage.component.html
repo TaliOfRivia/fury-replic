@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="upper-bg"><p>Lorem ipsum.</p></div>
+  <div class="upper-bg"></div>
   <div class="chat">
     <mat-card>
       <div class="head head-user">
@@ -29,10 +29,10 @@
       </div>
       <div class="head head-chatdata">
         <div class="user-info">
-          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <img class="round-avatar" [src]="chosenContact.imagePath+chosenContact.index+'.jpg'" alt="">
           <div class="username-status">
-            <div class="username">Loren Ipsum</div>
-            <div class="status">Online</div>
+            <div class="username">{{chosenContact.name}}</div>
+            <div class="status">{{chosenContact.status}}</div>
           </div>
         </div>
         <div class="rightest-block">
@@ -62,57 +62,43 @@
       </div>
 
       <div class="chats">
-        <div class="user-info">
-          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+        <div (click)="chooseContact(index)" class="user-info" *ngFor="let index of contacts">
+          <img class="round-avatar" [src]="index.imagePath+index.index+'.jpg'" alt="">
           <div class="username-status">
-            <div class="username">Loren Ipsum</div>
-            <div class="status">Online</div>
-          </div>
-        </div>
-        <div class="user-info">
-          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
-          <div class="username-status">
-            <div class="username">Loren Ipsum</div>
-            <div class="status">Online</div>
-          </div>
-        </div>
-        <div class="user-info">
-          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
-          <div class="username-status">
-            <div class="username">Loren Ipsum</div>
-            <div class="status">Online</div>
-          </div>
-        </div>
-        <div class="user-info">
-          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
-          <div class="username-status">
-            <div class="username">Loren Ipsum</div>
-            <div class="status">Online</div>
-          </div>
-        </div>
-        <div class="user-info">
-          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
-          <div class="username-status">
-            <div class="username">Loren Ipsum</div>
-            <div class="status">Online</div>
-          </div>
-        </div>
-        <div class="user-info">
-          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
-          <div class="username-status">
-            <div class="username">Loren Ipsum</div>
-            <div class="status">Online</div>
-          </div>
-        </div>
-        <div class="user-info">
-          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
-          <div class="username-status">
-            <div class="username">Loren Ipsum</div>
-            <div class="status">Online</div>
+            <div class="username">{{index.name}}</div>
+            <div class="status">{{index.status}}</div>
           </div>
         </div>
       </div>
 
+      <div class="chat-zone">
+        <div class="messages">
+          <div class="contact-message message">
+            <img class="round-avatar" [src]="chosenContact.imagePath+chosenContact.index+'.jpg'" alt="">
+            <p class="message-content">Меня зовут Кира Йошикаге</p>
+          </div>
+          <div class="self-message message">
+            <img class="round-avatar" src="../../assets/UserAvatar.jpg" alt="">
+            <p class="message-content">Мне 33 года</p>
+          </div>
+          <div class="contact-message message">
+            <img class="round-avatar" [src]="chosenContact.imagePath+chosenContact.index+'.jpg'" alt="">
+            <p class="message-content">Мой дом находится в северо-восточной части Морио, где расположены все виллы</p>
+          </div>
+          <div class="self-message message">
+            <img class="round-avatar" src="../../assets/UserAvatar.jpg" alt="">
+            <p class="message-content">Я не женат. Я работаю в универмаге Kame Yu и прихожу домой не позднее 8 вечера</p>
+          </div>
+        </div>
+
+        <mat-form-field class="write" appearance="fill">
+          <mat-label>Enter your message</mat-label>
+          <input matInput [type]="'text'">
+          <button mat-icon-button matSuffix>
+            <mat-icon>send</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
     </mat-card>
   </div>
 </div>

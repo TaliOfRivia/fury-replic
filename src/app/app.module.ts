@@ -8,7 +8,7 @@ import { RegistrationFormComponent } from './forms/registration-form/registratio
 
 import { MatPseudoCheckboxModule } from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
-import { MatFormFieldModule, MatFormField, MatFormFieldControl } from '@angular/material/form-field';
+import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {ReactiveFormsModule} from "@angular/forms";

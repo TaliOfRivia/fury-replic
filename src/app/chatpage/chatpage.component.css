@@ -1,15 +1,18 @@
 .container-fluid{
   overflow: hidden;
+  background-color: #EEE;
+  padding: 0 0 22.5%;
 }
 .upper-bg{
   background-color: #c8a01e;
+  padding: 10rem 0 0;
 }
 .chat{
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  margin: -2rem ;
+  margin: -8rem 10%;
   /*margin-top: -5rem;*/
   background-color: #fff;
 }
@@ -18,10 +21,10 @@
   /*flex-direction: row;*/
 }
 mat-card{
-padding: 0;
+  padding: 0;
 
   display: grid;
-  grid-template-columns: 1.5fr 5fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
 }
 .round-avatar{
@@ -58,15 +61,63 @@ padding: 0;
   flex-direction: column;
 
   height: 512px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .chats > .user-info{
   height: 64px;
-  margin: 20px 0;
+  margin: 1rem 0;
+  padding: .25rem 0;
   transition: 200ms ease-in-out all;
-
 
 }
 .chats > .user-info:hover{
-  background-color: #BBB;
+  background-color: rgba(221, 221, 221, 0.50);
+}
+.chat-zone{
+  display: grid;
+  grid-template-rows: 1fr minmax(.1fr, .5fr);
+  grid-template-columns: 1fr;
+}
+.message{
+  display: flex;
+  align-items: center;
+}
+.self-message{
+  align-self: end;
+  flex-direction: row-reverse;
+}
+.contact-message{
+  flex-direction: row;
+  align-self: start;
+}
+.contact-message .message-content{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+  border-radius: 5px;
+  border: #DDD 1px solid;
+  border-bottom: #CCC solid 3px;
+  padding: 5px 10px 10px;
+}
+.self-message .message-content{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #673ab7;
+  color: #fff;
+
+  border-radius: 5px;
+  border: #888 1px solid;
+  border-bottom: #BBB solid 3px;
+  padding: 5px 10px 10px;
+}
+.write{
+
+  align-self: end;
+  margin-bottom: -20px;
 }
