@@ -1,1 +1,118 @@
-<p>chatpage works!</p>
+<div class="container-fluid">
+  <div class="upper-bg"><p>Lorem ipsum.</p></div>
+  <div class="chat">
+    <mat-card>
+      <div class="head head-user">
+        <img class="round-avatar" src="assets/UserAvatar.jpg" alt="">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>portrait</mat-icon>
+            <span>profile</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            <span>settings</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>help</mat-icon>
+            <span>help</span>
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>log out</span>
+          </button>
+        </mat-menu>
+      </div>
+      <div class="head head-chatdata">
+        <div class="user-info">
+          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <div class="username-status">
+            <div class="username">Loren Ipsum</div>
+            <div class="status">Online</div>
+          </div>
+        </div>
+        <div class="rightest-block">
+          <button mat-icon-button>
+            <mat-icon>attach_file</mat-icon>
+          </button>
+          <button mat-icon-button [matMenuTriggerFor]="contactMenu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #contactMenu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>portrait</mat-icon>
+              <span>contact info</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>volume_mute</mat-icon>
+              <span>mute chat</span>
+            </button>
+            <mat-divider></mat-divider>
+
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              <span>log out</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+
+      <div class="chats">
+        <div class="user-info">
+          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <div class="username-status">
+            <div class="username">Loren Ipsum</div>
+            <div class="status">Online</div>
+          </div>
+        </div>
+        <div class="user-info">
+          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <div class="username-status">
+            <div class="username">Loren Ipsum</div>
+            <div class="status">Online</div>
+          </div>
+        </div>
+        <div class="user-info">
+          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <div class="username-status">
+            <div class="username">Loren Ipsum</div>
+            <div class="status">Online</div>
+          </div>
+        </div>
+        <div class="user-info">
+          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <div class="username-status">
+            <div class="username">Loren Ipsum</div>
+            <div class="status">Online</div>
+          </div>
+        </div>
+        <div class="user-info">
+          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <div class="username-status">
+            <div class="username">Loren Ipsum</div>
+            <div class="status">Online</div>
+          </div>
+        </div>
+        <div class="user-info">
+          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <div class="username-status">
+            <div class="username">Loren Ipsum</div>
+            <div class="status">Online</div>
+          </div>
+        </div>
+        <div class="user-info">
+          <img class="round-avatar" src="assets/Kakyoin.jpg" alt="">
+          <div class="username-status">
+            <div class="username">Loren Ipsum</div>
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+</div>

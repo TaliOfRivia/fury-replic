@@ -1,0 +1,72 @@
+.container-fluid{
+  overflow: hidden;
+}
+.upper-bg{
+  background-color: #c8a01e;
+}
+.chat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: -2rem ;
+  /*margin-top: -5rem;*/
+  background-color: #fff;
+}
+.head{
+  background-color: #EEE;
+  /*flex-direction: row;*/
+}
+mat-card{
+padding: 0;
+
+  display: grid;
+  grid-template-columns: 1.5fr 5fr;
+  grid-template-rows: 1fr;
+}
+.round-avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 1px;
+  margin: 1rem;
+}
+.head-user, .head-chatdata{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-info{
+  display: inline-flex;
+  align-items: center;
+}
+.username-status{
+  display: inline-flex;
+  flex-direction: column;
+}
+.username{
+  font-weight: 300;
+  font-size: 12px;
+}
+.status{
+  font-weight: 500;
+  font-size: 12px;
+  color: #AAAAAA;
+}
+.chats{
+  display: flex;
+  flex-direction: column;
+
+  height: 512px;
+  overflow: scroll;
+}
+.chats > .user-info{
+  height: 64px;
+  margin: 20px 0;
+  transition: 200ms ease-in-out all;
+
+
+}
+.chats > .user-info:hover{
+  background-color: #BBB;
+}

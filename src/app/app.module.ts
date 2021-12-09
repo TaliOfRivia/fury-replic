@@ -24,6 +24,8 @@ import { CardLayoutComponent } from './PageLayouts/card-layout/card-layout.compo
 import {MatCardModule} from "@angular/material/card";
 import { CardTabbedLayoutComponent } from './PageLayouts/card-tabbed-layout/card-tabbed-layout.component';
 import { ChatpageComponent } from './chatpage/chatpage.component';
+import {MatMenuModule} from "@angular/material/menu";
+import {MatDividerModule} from "@angular/material/divider";
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { ChatpageComponent } from './chatpage/chatpage.component';
     MatInputModule,
     MatTabsModule,
     MatCardModule,
+    MatMenuModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
