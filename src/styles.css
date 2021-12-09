@@ -1,5 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Readex Pro', sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Readex Pro", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(230, 230, 230);
+}
+
+::-webkit-scrollbar-track:hover {
+  background: rgb(180, 180, 180);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(158, 158, 158);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
