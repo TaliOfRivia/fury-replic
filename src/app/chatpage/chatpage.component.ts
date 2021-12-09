@@ -1,10 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 interface IContact{
   index: number;
   imagePath: string;
   name: string;
   status: string;
+}
+interface IMessage{
+  index: number;
+  viewValue: string;
+  text: string;
+  avatarPath: string;
 }
 
 @Component({
@@ -13,6 +19,11 @@ interface IContact{
   styleUrls: ['./chatpage.component.css']
 })
 export class ChatpageComponent implements OnInit {
+  @ViewChild('chatZone', {static: true})
+  chatZone!: ElementRef<HTMLDivElement>;
+  @ViewChild('MatInput', {static: true})
+  input!: ElementRef<HTMLInputElement>;
+
   public contacts: IContact[] = [
     {
       index: 1,
@@ -65,6 +76,35 @@ export class ChatpageComponent implements OnInit {
   ]
 
   public chosenContact: IContact = this.contacts[0];
+  public newMessageText: string = '';
+
+  public messages: IMessage[] = [
+    {
+      index: 1,
+      viewValue: 'contact-message message',
+      text: 'Меня зовут Кира Йошикаге',
+      avatarPath: this.chosenContact.imagePath+this.chosenContact.index+'.jpg',
+    },
+    {
+      index: 2,
+      viewValue: 'self-message message',
+      text: 'Мне 33 года',
+      avatarPath: '../../assets/UserAvatar.jpg',
+    },
+    {
+      index: 3,
+      viewValue: 'contact-message message',
+      text: 'Мой дом находится в северо-восточной части Морио, где расположены все виллы',
+      avatarPath: this.chosenContact.imagePath+this.chosenContact.index+'.jpg',
+    },
+    {
+      index: 4,
+      viewValue: 'self-message message',
+      text: 'Я не женат. Я работаю в универмаге Kame Yu и прихожу домой не позднее 8 вечера',
+      avatarPath: '../../assets/UserAvatar.jpg',
+    },
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
@@ -72,5 +112,17 @@ export class ChatpageComponent implements OnInit {
 
   public chooseContact(contact : IContact) : void {
     this.chosenContact = contact;
+  }
+
+  public send() {
+    if (this.input.nativeElement.value != ''){
+      this.messages.push({
+        index: this.messages.length+1,
+        viewValue: "self-message message",
+        text: this.input.nativeElement.value,
+        avatarPath: '../../assets/UserAvatar.jpg',
+      });
+      this.input.nativeElement.value = '';
+    }
   }
 }

@@ -77,6 +77,12 @@ mat-card{
   display: grid;
   grid-template-rows: 1fr minmax(.1fr, .5fr);
   grid-template-columns: 1fr;
+
+  height: 512px;
+}
+.messages{
+  height: 412px;
+  overflow-y: scroll;
 }
 .message{
   display: flex;
@@ -117,7 +123,9 @@ mat-card{
   padding: 5px 10px 10px;
 }
 .write{
+  padding: 10px;
+
+  border: #AAAAAAA5 solid 1px;
 
   align-self: end;
-  margin-bottom: -20px;
 }

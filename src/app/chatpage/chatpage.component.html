@@ -72,29 +72,17 @@
       </div>
 
       <div class="chat-zone">
-        <div class="messages">
-          <div class="contact-message message">
-            <img class="round-avatar" [src]="chosenContact.imagePath+chosenContact.index+'.jpg'" alt="">
-            <p class="message-content">Меня зовут Кира Йошикаге</p>
-          </div>
-          <div class="self-message message">
-            <img class="round-avatar" src="../../assets/UserAvatar.jpg" alt="">
-            <p class="message-content">Мне 33 года</p>
-          </div>
-          <div class="contact-message message">
-            <img class="round-avatar" [src]="chosenContact.imagePath+chosenContact.index+'.jpg'" alt="">
-            <p class="message-content">Мой дом находится в северо-восточной части Морио, где расположены все виллы</p>
-          </div>
-          <div class="self-message message">
-            <img class="round-avatar" src="../../assets/UserAvatar.jpg" alt="">
-            <p class="message-content">Я не женат. Я работаю в универмаге Kame Yu и прихожу домой не позднее 8 вечера</p>
+        <div class="messages" #chatZone>
+          <div [class]="index.viewValue" *ngFor="let index of messages">
+            <img class="round-avatar" [src]="index.avatarPath" alt="">
+            <p class="message-content">{{index.text}}</p>
           </div>
         </div>
 
         <mat-form-field class="write" appearance="fill">
           <mat-label>Enter your message</mat-label>
-          <input matInput [type]="'text'">
-          <button mat-icon-button matSuffix>
+          <input #MatInput matInput [type]="'text'">
+          <button mat-icon-button matSuffix (click)="send()">
             <mat-icon>send</mat-icon>
           </button>
         </mat-form-field>
