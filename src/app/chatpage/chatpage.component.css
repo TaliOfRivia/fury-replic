@@ -4,15 +4,16 @@
   padding: 0 0 22.5%;
 }
 .upper-bg{
-  background-color: #c8a01e;
-  padding: 10rem 0 0;
+  background-image: url("../../assets/chat.png");
+  background-repeat: no-repeat;
+  padding: 25rem 0 0;
 }
 .chat{
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  margin: -8rem 10%;
+  margin: -15rem 10%;
   /*margin-top: -5rem;*/
   background-color: #fff;
 }

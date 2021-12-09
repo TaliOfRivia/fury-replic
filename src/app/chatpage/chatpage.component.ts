@@ -76,7 +76,6 @@ export class ChatpageComponent implements OnInit {
   ]
 
   public chosenContact: IContact = this.contacts[0];
-  public newMessageText: string = '';
 
   public messages: IMessage[] = [
     {
@@ -112,10 +111,16 @@ export class ChatpageComponent implements OnInit {
 
   public chooseContact(contact : IContact) : void {
     this.chosenContact = contact;
+    for (let i = 0; i < this.messages.length; i++){
+      if (this.messages[i].viewValue != 'self-message message'){
+        this.messages[i].avatarPath = this.chosenContact.imagePath+this.chosenContact.index+'.jpg';
+      }
+    }
   }
 
-  public send() {
-    if (this.input.nativeElement.value != ''){
+  public send($event? : KeyboardEvent, toSend: boolean = false) {
+    // @ts-ignore
+    if ((this.input.nativeElement.value != '' && toSend) || (this.input.nativeElement.value != '' && $event.keyCode === 13)){
       this.messages.push({
         index: this.messages.length+1,
         viewValue: "self-message message",

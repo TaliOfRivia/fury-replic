@@ -1,0 +1,75 @@
+<div class="navbar">
+  <h2>All-In-One-Table</h2>
+  <div class="links">
+    <a href="#">Home</a>
+    <span> > </span>
+    <a href="#">Tables</a>
+    <span> > </span>
+    <a href="#" class="active">All-In-One-Table</a>
+  </div>
+</div>
+<div class="align-center">
+  <mat-card class="z-depth-2">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+
+        <!-- Image Column -->
+        <ng-container matColumnDef="image" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Image </th>
+          <td mat-cell *matCellDef="let customer"><img class="round-avatar" [src]="customer.image" alt=""></td>
+        </ng-container>
+
+        <!-- Names Column -->
+        <ng-container matColumnDef="name" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+          <td mat-cell *matCellDef="let customer"> {{customer.name}} </td>
+        </ng-container>
+
+        <!-- firstname Column -->
+        <ng-container matColumnDef="firstname" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Firstname </th>
+          <td mat-cell *matCellDef="let customer"> {{customer.firstName}} </td>
+        </ng-container>
+
+        <!-- lastname Column -->
+        <ng-container matColumnDef="lastname">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header > Lastname </th>
+          <td mat-cell *matCellDef="let customer"> {{customer.lastName}} </td>
+        </ng-container>
+
+        <!-- City Column -->
+        <ng-container matColumnDef="city" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> city </th>
+          <td mat-cell *matCellDef="let customer"> {{customer.city}} </td>
+        </ng-container>
+
+        <!-- Street Column -->
+        <ng-container matColumnDef="street" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Street </th>
+          <td mat-cell *matCellDef="let customer"> {{customer.street}} </td>
+        </ng-container>
+
+        <!-- Street Column -->
+        <ng-container matColumnDef="zipcode" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Zipcode </th>
+          <td mat-cell *matCellDef="let customer"> {{customer.zipcode}} </td>
+        </ng-container>
+
+        <!-- Street Column -->
+        <ng-container matColumnDef="phone" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
+          <td mat-cell *matCellDef="let customer"> {{customer.phone}} </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let myRowData; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 15]" #MatPaginator
+                     showFirstLastButtons
+                     aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+  </mat-card>
+</div>

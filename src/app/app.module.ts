@@ -26,6 +26,10 @@ import { CardTabbedLayoutComponent } from './PageLayouts/card-tabbed-layout/card
 import { ChatpageComponent } from './chatpage/chatpage.component';
 import {MatMenuModule} from "@angular/material/menu";
 import {MatDividerModule} from "@angular/material/divider";
+import { AllInOneTableComponent } from './all-in-one-table/all-in-one-table.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -40,6 +44,7 @@ import {MatDividerModule} from "@angular/material/divider";
     CardLayoutComponent,
     CardTabbedLayoutComponent,
     ChatpageComponent,
+    AllInOneTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +61,9 @@ import {MatDividerModule} from "@angular/material/divider";
     MatCardModule,
     MatMenuModule,
     MatDividerModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

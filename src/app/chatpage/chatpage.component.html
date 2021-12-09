@@ -81,8 +81,8 @@
 
         <mat-form-field class="write" appearance="fill">
           <mat-label>Enter your message</mat-label>
-          <input #MatInput matInput [type]="'text'">
-          <button mat-icon-button matSuffix (click)="send()">
+          <input #MatInput (keyup)="send($event)" matInput [type]="'text'">
+          <button mat-icon-button matSuffix (click)="send(undefined, true)">
             <mat-icon>send</mat-icon>
           </button>
         </mat-form-field>
