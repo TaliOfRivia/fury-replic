@@ -23,6 +23,7 @@ import { FillerComponent } from './PageLayouts/filler/filler.component';
 import { CardLayoutComponent } from './PageLayouts/card-layout/card-layout.component';
 import {MatCardModule} from "@angular/material/card";
 import { CardTabbedLayoutComponent } from './PageLayouts/card-tabbed-layout/card-tabbed-layout.component';
+import { ChatpageComponent } from './chatpage/chatpage.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CardTabbedLayoutComponent } from './PageLayouts/card-tabbed-layout/card
     FillerComponent,
     CardLayoutComponent,
     CardTabbedLayoutComponent,
+    ChatpageComponent,
   ],
   imports: [
     BrowserModule,

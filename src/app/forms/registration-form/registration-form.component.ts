@@ -7,9 +7,10 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   styleUrls: ['./registration-form.component.css']
 })
 export class RegistrationFormComponent implements OnInit {
-  options: FormGroup;
-  hideRequiredControl = new FormControl(false);
-  floatLabelControl = new FormControl('auto');
+  public options: FormGroup;
+  public hideRequiredControl = new FormControl(false);
+  public floatLabelControl = new FormControl('auto');
+  public hide : boolean = true;
 
   constructor(fb: FormBuilder) {
     this.options = fb.group({
@@ -19,7 +20,5 @@ export class RegistrationFormComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
-  hide = true;
 
 }
